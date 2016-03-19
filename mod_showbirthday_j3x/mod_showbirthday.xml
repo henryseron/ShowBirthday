@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>Show Birthday</name>
+    <author>ShakingWeb.com</author>
+    <creationDate>March 2016</creationDate>
+    <copyleft>Copyleft () 2016</copyleft>
+    <license>http://www.gnu.org/licenses/old-licenses/lgpl-2.0.html GNU/GPLv2</license>
+    <authorEmail>contacto@shakingweb.com</authorEmail>
+    <authorUrl>http://www.shakingweb.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Shows birthdays on the current month of all registered users</description>
+
+    <files>
+        <filename module="mod_showbirthday">mod_showbirthday.php</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_showbirthday.xml</filename>
+    </files>
+    
+    <languages>
+        <language tag="es-ES">languages/es-ES.mod_showbirthday.ini</language>
+        <language tag="en-GB">languages/en-GB.mod_showbirthday.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="format_date" type="radio" default="1" label="MOD_SHOWBIRTHDAY_FORMAT_DATE" description="MOD_SHOWBIRTHDAY_FORMAT_DATE_DESC">
+                    <option value="0">MM/DD</option>
+                    <option value="1">DD/MM</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    
+    <!-- UPDATESERVER DEFINITION -->
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+	<server type="extension" priority="1" name="Show Birthday">http://update.shakingweb.com/show_birthday.xml</server>
+    </updateservers>
+    
+</extension> 
